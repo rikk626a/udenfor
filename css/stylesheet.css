@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    margin: 0 5%;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* slider */
+
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.mySlides {
+    display: none;
+    width: auto;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.img1 {
+    background-image: url(../img/back.png);
+}
+
+.img2 {
+    background-image: url(../img/curly.png);
+}
+
+.img3 {
+    background-image: url(../img/salon.jpg);
+}
+
+
+/* header */
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-header {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: "logo amount" "logo nav";
+    background: rgba(191, 190, 190, 0.486);
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.logo {
+    grid-area: logo;
+    width: 100%;
+    padding: 1rem;
+}
+
+.amount {
+    grid-area: amount;
+    font-size: 1.2rem;
+    text-align: right;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+.nav {
+    grid-area: nav;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nav a {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+    color: #fff;
+    background-color: rgba(241, 128, 53, 0.623);
+    text-transform: uppercase;
+    line-height: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav a:hover {
+    background: #F17F35;
+}
+
+#active {
+    background-color: rgba(241, 128, 53, 1);
+}
+
+.text-header {
+    position: absolute;
+    bottom: 3em;
+    left: 0;
+    color: #fff;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 4rem;
+    column-gap: 2rem; */
+}
+
+.icons {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #F17F35;
+    filter: grayscale(1);
+}
+
+.icons:hover {
+    filter: grayscale(0);
+}
+
+
+/* main section */
+
+main {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-text {
+    margin: 2rem 0;
+}
+
+.data-visualization {
+    width: 100%;
+}
+
+
+/* data section */
+
+.campaign {
+    padding: 2rem 0;
+}
+
+.campaign-video {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.videoSlides {
+    width: 100%;
+    display: none;
+    margin: 2rem 0;
+}
+
+.active {
+    display: block;
+}
+
+.btns-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.video-btn {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.btnActive {
+    opacity: 1;
+}
+
+.campaign-project {
+    padding: 2rem 0;
+}
+
+.campaign-img {
+    width: 100%;
+}
+
+
+/* 360 video section */
+
+.video360-section {
+    padding: 2rem 0;
+}
+
+.video360 {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.donate {
+    display: block;
+    width: 20rem;
+    height: 3rem;
+    background-color: #F17F35;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #E8E8E8;
+    padding: 2rem;
+}
+
+
+/* desktop version */
+
+@media only screen and (min-width: 780px) {
+    .wrapper {
+        margin: 0 25%;
+    }
+    .content-header {
+        height: 15rem;
+    }
+    .nav-wrapper {
+        width: 50%;
+    }
+    .amount {
+        font-size: 2rem;
+    }
+    .nav a {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+    .icons-wrapper {
+        padding: 0 11rem;
+        column-gap: 11rem;
+    }
+    .project {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas: "project-h1 projecth1" "project-text data-visualization";
+    }
+    .project-h1 {
+        grid-area: project-h1;
+    }
+    .project-text {
+        grid-area: project-text;
+    }
+    .data-visualization {
+        grid-area: data-visualization;
+    }
+    .campaign-project {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas: "campaign-project-h1 campaign-project-h1" "campaign-text campaign-img";
+    }
+    .campaign-project-h1 {
+        grid-area: campaign-project-h1;
+    }
+    .campaign-text {
+        grid-area: campaign-text;
+    }
+    .campaign-img {
+        grid-area: campaign-img;
+    }
+}
