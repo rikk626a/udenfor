@@ -1,1 +1,36 @@
-body {}
+body {
+     background-color: #000;
+     color: orange;
+     margin: 0 auto;
+}
+
+p {
+     font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+     font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+     text-decoration: none;
+     cursor: pointer;
+}
+
+#bg-container {
+     position: fixed;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100%;
+     overflow: auto;
+}
+
+
+.2container {
+     height: 800px;
+     width: 100%;
+     background-color: black;
+
+}
